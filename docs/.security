@@ -1,0 +1,31 @@
+Para criptografar o arquivo api.conf completo usando o Vault do HashiCorp, poderíamos fazer o seguinte:
+
+1. Instalar e configurar o Vault em modo desenvolvedor:
+
+```
+$ vault server -dev
+```
+
+2. Criar uma chave secreta no Vault para armazenar o arquivo: 
+
+```
+$ vault kv put secret/api-config value=@api.conf
+```
+
+3. Criptografar o conteúdo da chave secreta usando uma política:
+
+```
+$ vault policy write api-config-encrypt - <<EOF
+# ... política de criptografia ...
+EOF
+```
+
+4. Durante a inicialização do container docker, baixar o arquivo criptografado:
+
+```
+$ vault kv get -field=value secret/api-config | vault write - api.conf
+``` 
+
+5. Na aplicação, ler o arquivo criptografado normalmente
+
+Dessa forma garantimos que o arquivo de configuração nunca fique exposto em plaintext, mesmo que alguém consiga acessar o sistema de arquivos. O Vault mantém tudo criptografado.
