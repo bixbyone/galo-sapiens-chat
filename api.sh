@@ -98,5 +98,23 @@ function extrato {
 # Inicializa banco de dados
 sqlite3 "${DB_FILE}" ".read init.sql"
 
+# Inicializa banco de dados 
+sqlite3 "${DB_FILE}" ".read init.sql"
+
+# Adiciona configurações do SQLite
+sqlite3 "${DB_FILE}" ".read pragma.conf"  
+
+if ! sqlite3 "${DB_FILE}" ".read init.sql"; then
+  echo "Erro ao inicializar DB" >&2
+  exit 1
+fi
+
+if ! sqlite3 "${DB_FILE}" ".read pragma.conf"; then
+  echo "Erro ao carregar configurações PRAGMA" >&2  
+  exit 1
+fi 
+
+sqlite3 --verbose "${DB_FILE}" // restante dos comandos
+
 # Roda servidor HTTP
 exec curl --data "{"http://nginx:80/transacao\"}"
