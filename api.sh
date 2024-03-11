@@ -1,7 +1,10 @@
+#api.sh   #author: zeh sobrinho & tutorC
+#date: 10-03-24
+#vesão: 1.0.1 
+
 #!/usr/bin/env bash
 
-# Carrega as variáveis de ambiente
-source ../.env
+source ../config/api.conf
 
 # Função para realizar transações
 function transacao {
