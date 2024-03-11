@@ -3,7 +3,9 @@
 # Visão Geral
 Esta API foi desenvolvida para a Rinha de Backend 2024/Q1. 
 Ela implementa uma lógica de controle de concorrência para transações de crédito e débito,
-    utilizando o banco de dados SQLite e o servidor Nginx.
+    utilizando o banco de dados SQLite e o servidor Nginx ou nosso proprio server app api db lb 
+    SoM (Software on a Memory, functions? ) a Nível de App extend SOC
+    https://g.co/gemini/share/412ca64f0938
 ## Tecnologias Utilizadas
 * Bash
 * Docker Compose
