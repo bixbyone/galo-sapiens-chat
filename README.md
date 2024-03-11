@@ -8,7 +8,7 @@
     * Docker Compose
     * SQLite
     * Nginx
-    * DeepAutoScale
+    * DeepAutoScale - fase II
 ## Estrutura da APIA API   
 é composta pelos seguintes serviços:
 * **API:** 
@@ -35,3 +35,29 @@
     zeh sobrinho e uma caralhada de bot´s pacientes e zueiros
 ## Contato
     @trainsppotting
+
+galo-sapiens-chat/
+├── Dockerfile (ok)
+├── README.md (ok)
+├── api.bash  compilação bashC (performar ano nivel de rust,c, c++ e java empatados na #rinhabackend23)
+├── deepautoscale
+│   ├── data (pendente)
+│   └── model (pendente)
+│   └── monitoring
+│       ├── docker
+│       │   └── log (pendente)
+│       └── nginx
+│           └── log (pendente)
+├── docker-compose.yml (ok)
+├── docs
+│   └── README.md (ok)
+├── executa-test-local.sh (ok)
+├── load-test
+│   └── user-files
+│       └── simulations  (pendente)
+│           └── rinhabackend
+│               └── class RinhaBackendCrebitosSimulation.scala (ok)
+└── sql
+    ├── init.sql (ok)
+    ├── nginx.conf (ok)
+    └── pragma.conf (ok)

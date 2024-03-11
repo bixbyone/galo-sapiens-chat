@@ -1,21 +1,30 @@
 Requisitos
 
-        ├── participantes
-        │   └── galo-sapiens-chat
-        │       ├── api.sh
-        │       ├── Dockerfile
-        │       ├── docker-compose.yml
-        │       ├── nginx.config
-        │       ├── sql
-        │       │   ├── init.sql
-        │       │   ├── pragma.conf
-        │       ├── README.md
-        │       ├── docs
-        │       ├── logs
-        │       │   ├── data
-        │       ├── monitoring
-        │       ├── deepautoscale
-        │       ├── docker-logs
+galo-sapiens-chat/
+├── Dockerfile (ok)
+├── README.md (ok)
+├── api.sh (pendente)
+├── deepautoscale
+│   ├── data (pendente)
+│   └── model (pendente)
+│   └── monitoring
+│       ├── docker
+│       │   └── log (pendente)
+│       └── nginx
+│           └── log (pendente)
+├── docker-compose.yml (ok)
+├── docs
+│   └── README.md (ok)
+├── executa-test-local.sh (ok)
+├── load-test
+│   └── user-files
+│       └── simulations  (pendente)
+│           └── rinhabackend
+│               └── class RinhaBackendCrebitosSimulation.scala (ok)
+└── sql
+    ├── init.sql (ok)
+    ├── nginx.conf (ok)
+    └── pragma.conf (ok)
 
 
 **Observações:**
