@@ -4,7 +4,8 @@
 
 #!/usr/bin/env bash
 
-source ../config/api.conf
+#source ../config/api.conf
+source $CONFIG_FILE
 
 # Função para realizar transações
 function transacao {
