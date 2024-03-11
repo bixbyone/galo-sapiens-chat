@@ -1,17 +1,72 @@
+# Documento de Implantação 
+# galo-sapiens-chat/
+# Data: 30/03/2024
+# Versão: 1.0
+# Autor: Bruno Silva
+
+# Requisitos de Implantação
+
+- Servidor com no mínimo 4GB de RAM e 2 CPUs
+- Docker e Docker Compose instalados
+- Banco de dados Sqlite
+
+# Instalação 
+
+1. Faça o clone do repositório 
+2. Rode o comando `docker-compose up`
+3. Aguarde a inicialização dos containers
+4. Acesse a documentação em docs/README.md
+
+# Configuração
+
+- Edite o arquivo .env e configure as variáveis de ambiente
+- Personalize docker-compose.yml e configure recursos e portas
+- Configure o banco de dados no arquivo pragma.conf
+
+# Implementação
+
+- Crie a release na branch de produção
+- Gere uma nova imagem Docker 
+- Publique a imagem no Docker Hub
+- Implante na instância de produção
+
+# Testes 
+
+- Rode os testes unitários 
+- Teste as funcionalidades manually
+- Valide os endpoints da API
+- Execute teste de carga
+- Colete e analise métricas
+
+# Operação
+
+- Monitoramento com Prometheus e Grafana
+- Logs 
+- Backup diário do banco de dados
+- Escalonamento automático com Kubernetes
+- Processo de atualização e rollbacks 
+
+Assinado,
+Bruno Silva
+
+
+
+
+
 Requisitos
 
 galo-sapiens-chat/
 ├── Dockerfile (ok)
 ├── README.md (ok)
-├── api.sh (pendente)
+├── api.sh (ok)
 ├── deepautoscale
-│   ├── data (pendente)
+│   ├── data 
 │   └── model (pendente)
 │   └── monitoring
 │       ├── docker
-│       │   └── log (pendente)
+│       │   └── log 
 │       └── nginx
-│           └── log (pendente)
+│           └── log 
 ├── docker-compose.yml (ok)
 ├── docs
 │   └── README.md (ok)
@@ -25,6 +80,8 @@ galo-sapiens-chat/
     ├── init.sql (ok)
     ├── nginx.conf (ok)
     └── pragma.conf (ok)
+
+
 
 
 **Observações:**
